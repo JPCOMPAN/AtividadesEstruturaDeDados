@@ -16,6 +16,7 @@ public class ex015 {
         System.out.print("A torcedora terá que pagar metade do ingresso!");
     } else if (horarioAtual <= horarioLimite && genero.equalsIgnoreCase("homem") ){
         System.out.print("O torcedor deverá pagar apenas 70% do ingresso!");
-    } else System.out.print("O torcedor deverá pagar o ingresso integral!");
+    } else
+        System.out.print("O torcedor deverá pagar o ingresso integral!");
     }
 }

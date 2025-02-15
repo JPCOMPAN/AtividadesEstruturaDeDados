@@ -11,30 +11,29 @@ public class ex022 {
         dia = scanner.nextInt();
         mes = scanner.nextInt();
         ano = scanner.nextInt();
-        if ((dia <= 31 && dia != 0) && (mes <= 12 && mes != 0))   {
-            if (ano % 4 == 0 && ano % 100 != 0 || ano % 4 == 0 && ano % 100 == 0 && ano % 400 == 0) {
-                if (mes == 1 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)
-                    System.out.printf("Sua data %d do mês %d do ano %d é valida!", dia, mes, ano);
-                else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && (dia <= 30)) {
-                    System.out.printf("Sua data %d do mês %d do ano %d é valida!", dia, mes, ano);
-                } else if (dia <= 29) {
-                    System.out.printf("Sua data %d do mês %d do ano %d é valida!", dia, mes, ano);
-                } else {
-                    System.out.printf("Sua data %d do mês %d do ano %d não é valida!", dia, mes, ano);
-                }
-            } else {
-                if (mes == 1 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || 12 == mes) {
-                    System.out.printf("Sua data %d do mês %d do ano %d é valida!", dia, mes, ano);
-                } else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && (dia <= 30)) {
-                    System.out.printf("Sua data %d do mês %d do ano %d é valida!", dia, mes, ano);
-                } else if (dia <= 28) {
-                    System.out.printf("Sua data %d do mês %d do ano %d é valida!", dia, mes, ano);
-                } else {
-                    System.out.printf("Sua data %d do mês %d do ano %d não é valida!", dia, mes, ano);
+        boolean isValida = false;
+
+        if(ano > 0) {
+            if(mes>= 1 && mes <=12){
+                if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
+                    if (dia >= 1 && dia <= 31) {
+                        isValida = true;
+                    }
+                } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
+                    if(dia >= 1 && dia <=30){
+                        isValida = true;
+                    }
+                } else if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
+                    if (dia >= 1 && dia <= 29){
+                        isValida = true;
+                    }
                 }
             }
+        }
+        if (isValida) {
+            System.out.println("A data é válida!");
         } else {
-            System.out.printf("Sua data %d do mês %d do ano %d não é valida!", dia, mes, ano);
+            System.out.println("Data invalida!");
         }
     }
 }

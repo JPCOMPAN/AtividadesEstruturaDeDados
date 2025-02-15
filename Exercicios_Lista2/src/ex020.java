@@ -9,9 +9,9 @@ public class ex020 {
         letra = scanner.next().toUpperCase().charAt(0);
 
         if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U') {
-            System.out.printf("Sua letra %c é uma vogal!", letra);
+            System.out.printf("A letra %c é uma vogal!", letra);
         } else if (Character.isLetter(letra)) {
-            System.out.printf("Sua letra %c é uma consoante", letra);
+            System.out.printf("A letra %c é uma consoante", letra);
         } else {
             System.out.printf("%c não é uma letra do alfabeto!", letra);
         }
