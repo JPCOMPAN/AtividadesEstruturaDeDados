@@ -15,7 +15,7 @@ public class ex037 {
             pesoTotal += pesoBagagens;
         }
         mediaPeso = pesoTotal / bagagemAtual;
-        precoBagagem = (pesoTotal / 10) * 10;
+        precoBagagem = (pesoTotal / 10) * 100;
         System.out.printf("\nMedia de peso das bagagens: %.2fkg\nPeso total das bagagens: %.2fkg\nPreço a ser pago: R$%.2f", mediaPeso, pesoTotal, precoBagagem);
 
     }
