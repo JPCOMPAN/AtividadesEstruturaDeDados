@@ -1,12 +1,15 @@
 public class ex029 {
     public static void main(String[]args){
-        char as = '*', espaco = ' ';
-        int numero;
         int tamanho = 13;
-        for (numero = 1; numero <= tamanho; numero++){
-            String espacoVazio = String.valueOf(espaco).repeat(tamanho - numero);
-            String partesArvore = String.valueOf(as).repeat(numero);
-            System.out.print(espacoVazio + partesArvore + "\n");
+        for (int i = 0; i <= tamanho; i++){
+            for(int j = 0; j < tamanho - i; j++){
+                System.out.print(" ");
+            }
+
+            for(int h = 0; h < (2 *  i + 1); h++){
+                System.out.print("*");
+            }
+            System.out.println();
         }
 
     }
