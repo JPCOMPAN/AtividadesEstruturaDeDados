@@ -2,7 +2,7 @@ public class ex041 {
     public static void main(String[]args){
         double valorReal = 5.685, maiorValor = Double.MIN_VALUE, maiorVariacao = Double.MIN_VALUE, valorAtual;
         int valores = 18;
-
+        System.out.printf("Valor dolar em real: R$%.2f\n", valorReal);
         for(int i = 1; i<=valores; i++){
             double variacao = Math.random() * 0.20 - 0.10;
 
