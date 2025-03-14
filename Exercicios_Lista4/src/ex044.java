@@ -26,8 +26,5 @@ public class ex044 {
         System.out.println("\nMenor preço encontrado: ");
         System.out.printf("R$ %.2f", menorPreco);
 
-
-
-
     }
 }
