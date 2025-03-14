@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ex42 {
+public class ex042 {
     public static void main(String[]args){
       Scanner scanner = new Scanner(System.in);
       int quantCambio = 5;
