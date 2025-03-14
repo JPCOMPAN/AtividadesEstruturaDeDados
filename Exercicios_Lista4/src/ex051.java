@@ -21,10 +21,8 @@ public class ex051 {
             return;
         }
 
-
         char[] isolarData = Arrays.copyOfRange(codigo, 3, 11);
         String dataIsolada = new String(isolarData);
-
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
         try {
